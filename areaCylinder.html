@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+반지름: <input id='radius'> <br>
+높이: <input id='height'> <br>
+<button onclick="cylinder()"> 원기둥의 넓이 구하기 </button>
+<p id="result"> </p>
+</div>
+<script>
+    //2 * (밑넓이) + (옆넓이) = 2*파이*반지름제곱 + 2*파이*반지름*높이
+
+    function cylinder() {
+        let r = Number(document.getElementById('radius').value);
+        let h = Number(document.getElementById('height').value);
+        if (isNaN(r) || isNaN(h) || !r || !h) {
+            document.getElementById('result').innerHTML = '빈칸이 있거나 숫자가 아닌 값이 들어있습니다.';
+        } else {
+            let p = Math.PI
+            let cylinderArea = (2 * p * Math.pow(r, 2)) + (h * 2 * p * r);
+            document.getElementById('result').innerHTML = '원기둥의 넓이는 = ' + cylinderArea;
+        }
+    }
+</script>
+</body>
+
+</html>

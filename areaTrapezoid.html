@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    윗변: <input id='base1'> <br>
+    아랫변: <input id='base2'> <br>
+    높이: <input id='height'> <br>
+    <button onclick="trapezoid()"> 사다리꼴의 넓이 구하기 </button>
+    <p id="result"> </p>
+    </div>
+    <script>
+        function trapezoid() {
+            let b1 = Number(document.getElementById('base1').value);
+            let b2 = Number(document.getElementById('base2').value);
+            let h = Number(document.getElementById('height').value);
+
+            if (isNaN(b1) || isNaN(b2) || isNaN(h) || !b1 || !b2 || !h) {
+                document.getElementById('result').innerHTML = '빈칸이 있거나 숫자가 아닌 값이 들어있습니다.';
+            } else {
+                let trapezoidArea = ((b1 + b2)/2) * h;
+                document.getElementById('result').innerHTML = '사다리꼴의 넓이는 = ' + trapezoidArea;
+            }
+        }
+    </script>
+</body>
+
+</html>

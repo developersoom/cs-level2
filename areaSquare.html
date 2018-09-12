@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        가로: <input id='width'> <br>
+        세로: <input id='length'> <br>
+        <button onclick="square()"> 사각형의 넓이 구하기 </button>
+        <p id="result"> </p>
+
+    </div>
+    <script>
+        function square() {
+            let w = Number(document.getElementById('width').value);
+            let l = Number(document.getElementById('length').value);
+
+            if (isNaN(w) || isNaN(l) || !w || !l) {
+                document.getElementById('result').innerHTML = '빈칸이 있거나 숫자가 아닌 값이 들어있습니다.';
+            } else {
+                let squareArea = w * l
+                document.getElementById('result').innerHTML = '사각형의 넓이는 = ' + squareArea;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

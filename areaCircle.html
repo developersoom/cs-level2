@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        반지름: <input id='radius'> <br>
+        <button onclick="circle()"> 원의 넓이 구하기 </button>
+        <p></p>
+        <p id="result"> </p>
+
+    </div>
+    <script>
+        function circle() {
+            let p = Math.PI;
+            let r = Number(document.getElementById('radius').value);
+            if (isNaN(r) || !r) {
+                document.getElementById('result').innerHTML = '빈칸이 있거나 숫자가 아닌 값이 들어있습니다.';
+            } else {
+                let circleArea = p * Math.pow(r, 2);
+                document.getElementById('result').innerHTML = '원의 넓이는 = ' + circleArea;
+            }
+        }
+    </script>
+</body>
+
+</html>
