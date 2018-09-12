@@ -11,14 +11,13 @@
 <body>
     <script>
         function getPrimeNumber(n) {
-            var emptyArr = [];
+            var arr = [1,n];
             for (let i = n - 1; i >= 1; i--) {
                 if (n % i === 0) {
-                    emptyArr.push(n);
-                    emptyArr.push(i);
+                    arr.push(i);
                 }
             }
-            let arr = [...new Set(emptyArr)];
+            // let arr = [...new Set(emptyArr)];
             return arr;
         }
 
