@@ -1,18 +1,21 @@
+
 function getArea(shape, val1, val2, val3) {
     if (shape === 'rect') {
         let result = measureRectangleArea(val1, val2);
-        return result;
+        return console.log('사각형의 넓이는 '+result);
     } else if (shape === 'trapezoid') {
         let result = measureTrapezoidArea(val1, val2, val3);
-        return result;
+        return console.log('사다리꼴의 넓이는 '+result);
     } else if (shape === 'circle' && !val2 && !val3){
         let result = measureCircleArea(val1);
-        return result;
+        return console.log('원의 넓이는 '+result);
     } else if (shape === 'circle' && !val3){
         let result = measureCirclesArea(val1, val2);
-        return result;
+        return console.log('반지름 '+val1+'부터 '+val2+'까지 '+val1+'씩 증가하는 원 '+val2+'의 넓이는 '+result);
     }
 }
+
+
 
 function measureCirclesArea(min, max) {
     let p = Math.PI;
@@ -46,7 +49,6 @@ function measureRectangleArea(w, l) {
         return rectangleArea;
     }
 }
-
 
 function measureTrapezoidArea(b1, b2, h) {
     if (arguments.length != 3) {
