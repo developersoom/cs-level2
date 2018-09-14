@@ -4,18 +4,22 @@ function getArea(shape, val1, val2, val3) {
     if (shape === 'rect') {
         let result = measureRectangleArea(val1, val2);
         logArr.push('rect');
+        console.log('사각형 넓이의 값은 =' + result);
         return result;
     } else if (shape === 'trapezoid') {
         let result = measureTrapezoidArea(val1, val2, val3);
         logArr.push('trapezoid');
+        console.log('사다리꼴 넓이의 값은 =' + result);
         return result;
     } else if (shape === 'circle' && !val2){
         let result = measureCircleArea(val1);
         logArr.push('circle');
+        console.log('원 넓이의 값은 =' + result);
         return result;
     } else if (shape === 'circle' && !val3){
         let result = measureCirclesArea(val1, val2);
         logArr.push('circle');
+        console.log('반지름 '+val1+'부터 '+val2+'까지 넓이의 값은 =' + result);
         return result;
     }
 }
