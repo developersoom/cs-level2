@@ -96,3 +96,26 @@ function isTypeSk(obj) {
 
 answer = isTypeSk(data);
 console.log(answer);
+
+
+
+//배열 특성 확인하기 (from Vanh)
+
+/*
+function getNamesInSpecificType(dataArr, typeToSearch = "sk", resultArr = []) {
+    for (let item of dataArr) {
+        if (typeof item === 'object') {
+            let dataObj = item;
+            if (dataObj.type === typeToSearch) {resultArr.push(dataObj.name);}
+            if (dataObj.childnode.length > 0) {
+                resultArr.concat(
+                    getNamesInSpecificType(dataObj.childnode, typeToSearch, resultArr)
+                );
+            }
+        }
+    }
+    return resultArr;
+}
+
+getNamesInSpecificType(dataArr, 'kt');
+*/
